@@ -59,7 +59,10 @@ int main(int argc, char *argv[]) {
 		if (success) { break; } 
 
 		// Set TTL for outgoing packets
-		setsockopt(sockfd, IPPROTO_IP, IP_TTL, &ttl, sizeof(int)); 
+		if (setsockopt(sockfd, IPPROTO_IP, IP_TTL, &ttl, sizeof(int)) < 0) {
+				fprintf(stderr, "setsocketopt\n");
+				return 1;
+		}
 
 		int received = 0;
 		int unique = 0;
