@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -std=gnu99 -Wextra
 LDFLAGS =
 
 SRCS = traceroute.c util.c
