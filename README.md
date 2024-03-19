@@ -1,5 +1,5 @@
 # Traceroute
-Carried out during the Computer Networks course at the University
+Carried out during the Computer Networks course at the University.
 
 ## Usage
 ```
